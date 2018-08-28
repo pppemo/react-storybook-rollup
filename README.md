@@ -11,8 +11,16 @@ This project contains a combination of:
 * It bundles all your components developed with Storybook into one single portable dependency that you can inject into your app.
 
 ### Usage
+#### Storybook
 1. Run `npm install`
 2. Run `npm run storybook` in order to run Storybook, visit localhost:6006
+
+You can also build a static version of Storybook (that could be deployed to some shared location) by running `npm run build-storybook`
+
+#### Rollup - building package
+* `npm run build:dev` - builds a package in development mode (i.e. no minifying and uglyfying)
+* `npm run build:dev-w` - same as above, but is watching changes and rebuilds immediately after one is found
+* `npm run build:prod` - builds a production package, which can be found in `/build` folder of your app
 
 ### Storybook and Rollup configuration
 Storybook is awesome tool. And Rollup is an awesome bundler. But combined together they are twice as awesome!
