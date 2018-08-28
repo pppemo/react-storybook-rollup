@@ -1,8 +1,4 @@
 ### Usage
 ```js
-import { Button, BUTTON_COLORS } from 'joist-react-ui-kit'
-
-...
-
-<Button color={BUTTON_COLORS.CHAMBRAY}>View</Button>
+<Button color="Red">My Button</Button>
 ```
