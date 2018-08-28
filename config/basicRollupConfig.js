@@ -14,7 +14,7 @@ const basicRollupConfig = ({ nodeModulesPath }) => ({
     file: 'build/app.js',
     format: 'umd'
   },
-  name: 'joistReactUiKit',
+  name: 'uiKitLibrary',
   plugins: [
     eslint({
       include: ['**/*.js', '**/*.jsx', '**/*.mjs'],

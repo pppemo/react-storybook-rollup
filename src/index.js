@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+// we need this import as this file consists of exports only
+// eslint-disable-next-line
+import React from 'react'
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+export {
+  default as Button,
+  COLORS as BUTTON_COLORS
+} from './components/Button'
