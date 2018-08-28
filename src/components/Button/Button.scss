@@ -1,0 +1,113 @@
+
+.container {
+  border-radius: 4px;
+  background-color: lightgray;
+  border: 2px solid lightgray;
+  color: white;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 15px;
+  vertical-align: top;
+
+  circle {
+    stroke: white;
+  }
+
+  &:active {
+    background-color: darken(lightgray, 5%);
+  }
+}
+
+@mixin button-style($color, $contrastColor) {
+  color: $contrastColor;
+  background-color: $color;
+  border-color: $color;
+  transition: background-color 0.3s, border-color 0.3s;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  outline: none;
+
+  circle {
+    stroke: $contrastColor;
+  }
+
+  &:active {
+    background-color: darken($color, 11%);
+    border-color: darken($color, 11%);
+    transition: none;
+  }
+
+  &:hover, &:focus {
+    background-color: darken($color, 7%);
+    border-color: darken($color, 7%);
+  }
+
+  &[disabled] {
+    background-color: mix(white, $color, 60%);
+    border-color: mix(white, $color, 60%);
+    color: mix(white, $contrastColor, 60%);
+    cursor: not-allowed;
+  }
+
+  &.noFill {
+    color: $color;
+    background: transparent;
+
+    circle {
+      stroke: $color;
+    }
+
+    &:active {
+      background: transparent;
+    }
+  }
+
+  &.noFill:hover {
+    color: darken($color, 7%);
+  }
+
+  &.noFill[disabled] {
+    color: mix(white, $color, 60%);
+    background: transparent;
+
+    &:active {
+      background: transparent;
+    }
+  }
+
+  &.noOutline, &.noOutline[disabled] {
+    border-color: transparent;
+  }
+}
+
+.buttonRed {
+  @include button-style(red, white);
+}
+
+.buttonGold {
+  @include button-style(gold, white);
+}
+
+.buttonGray {
+  @include button-style(gray, white);
+}
+
+.buttonBlack {
+  @include button-style(black, white);
+}
+
+.buttonBlue {
+  @include button-style(blue, white);
+}
+
+.buttonWhite {
+  @include button-style(white, gray);
+}
+
+.roundish {
+  border-radius: 20px;
+}
+
+.fillWidth {
+  width: 100%;
+}
